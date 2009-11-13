@@ -1,6 +1,7 @@
 package com.twowire.web;
 
 
+import static org.junit.Assert.*;
 import junit.framework.TestCase;
 
 import org.junit.Before;
@@ -10,6 +11,7 @@ import org.springframework.mock.web.MockHttpServletResponse;
 
 import com.twowire.auth.AuthenticationService;
 import com.twowire.auth.FakeAuthenticationService;
+import com.twowire.auth.LdapAuthenticationService;
 
 public class TestLoginController extends TestCase {
 	
@@ -49,6 +51,27 @@ public class TestLoginController extends TestCase {
 		servlet.service(request, response);
 		assertEquals("/CreateTicket.jsp", response.getRedirectedUrl());
 		assertEquals("validuser", request.getSession().getAttribute("username"));
+	}
+	
+	@Test
+	public void testInvalidLoginForwardsToInvalidLoginPage() throws Exception {
+		request.addParameter("username", "return");
+		request.addParameter("password", "false");
+		servlet.service(request, response);
+		assertEquals("/InvalidLogin.jsp", response.getRedirectedUrl());
+	}
+	
+	@Test
+	public void testGetAuthenticationService() throws Exception {
+		boolean fake = servlet.getAuthenticationService().getClass().equals(FakeAuthenticationService.class);
+		boolean ldap = servlet.getAuthenticationService().getClass().equals(LdapAuthenticationService.class);
+		assertTrue(fake || ldap);
+	}
+	
+	@Test
+	public void testDoGetForwardsToDoPost() throws Exception {
+		servlet.doGet(request, response);
+		assertEquals("/CreateTicket.jsp", response.getRedirectedUrl());
 	}
 
 }

@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.twowire.auth.AuthenticationService;
 import com.twowire.auth.FakeAuthenticationService;
+import com.twowire.auth.LdapAuthenticationService;
 import com.twowire.data.DataService;
 import com.twowire.data.IDataService;
 import com.twowire.model.PendingTickets;
@@ -56,16 +57,11 @@ public class LoginController extends HttpServlet {
 	}
 
 	protected IDataService getDataService() {
-		try {
 			return new DataService();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
 	}
 
 	protected AuthenticationService getAuthenticationService() {
-        return new FakeAuthenticationService();
+        return new LdapAuthenticationService();
     }
 
 }

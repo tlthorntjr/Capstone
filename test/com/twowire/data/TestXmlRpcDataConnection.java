@@ -15,6 +15,11 @@ public class TestXmlRpcDataConnection extends TestCase {
 		conn = new XmlRpcDataConnection();
 	}
 	
+	@Before
+	private void setUp(String user, String pass) {
+		conn = new XmlRpcDataConnection(user, pass);
+	}
+	
 	@Test
 	public void testLogoutInvalidLoginToken() throws Exception {
 		boolean result = conn.logout("Logging out now...");
@@ -37,5 +42,19 @@ public class TestXmlRpcDataConnection extends TestCase {
 		boolean result = conn.logout(loginToken);
 		assertTrue(result);
 	}
+	
+	@Test
+	public void testInvalidLoginReturnsNullToken() throws Exception {
+		setUp("nouser", "nopass");
+		String loginToken = conn.login();
+		assertNull(loginToken);
+	}
+	
+	@Test
+	public void testInvalidLogoutReturnsFalse() throws Exception {
+		assertFalse(conn.logout("Nonsense"));
+	}
+
+
 
 }
