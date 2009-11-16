@@ -5,7 +5,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
-import com.twowire.model.Ticket;
+import com.twowire.create.Ticket;
 
 @SuppressWarnings("serial")
 public class CreateTicketController extends HttpServlet {
@@ -21,7 +21,6 @@ public class CreateTicketController extends HttpServlet {
 		String submit = request.getParameter("submit_question");
 		
 		if (submit != null && allFieldsFull(subject, question, category)) {			
-			ticket = new Ticket(subject, question, category);
 			response.sendRedirect(target);
 			request.getSession().setAttribute("ticket", ticket);
 		}

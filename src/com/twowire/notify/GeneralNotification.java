@@ -1,6 +1,7 @@
 package com.twowire.notify;
 
-import com.twowire.model.Ticket;
+import com.twowire.Observer;
+import com.twowire.create.Ticket;
 
 public class GeneralNotification implements Observer {
 

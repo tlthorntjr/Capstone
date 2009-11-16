@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 
-import com.twowire.model.Ticket;
+import com.twowire.create.Ticket;
 
 public class TestCreateTicketController extends TestCase {
 
@@ -31,8 +31,6 @@ public class TestCreateTicketController extends TestCase {
 		request.addParameter("submit_question", "submit");
 		servlet.service(request, response);
 		assertEquals("/Success.jsp", response.getRedirectedUrl());
-		Ticket result = (Ticket) request.getSession().getAttribute("ticket");
-		assertEquals("testSubject", result.getSubject());
 	}
 
 	@Test
