@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="5" time="0.033" errors="0" skipped="0" tests="5" name="com.twowire.web.TestLoginController">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-6-sun-1.6.0.15/jre/lib/i386"/>
+    <property name="java.vm.version" value="14.1-b02"/>
+    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.vendor.url" value="http://java.sun.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/tltjr/Maven/Test"/>
+    <property name="java.runtime.version" value="1.6.0_15-b03"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="basedir" value="/home/tltjr/Maven/Test"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-6-sun-1.6.0.15/jre/lib/endorsed"/>
+    <property name="os.arch" value="i386"/>
+    <property name="surefire.real.class.path" value="/tmp/surefirebooter157086835867526790.jar"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/lib/jvm/java-6-sun-1.6.0.15/jre/lib/i386/server:/usr/lib/jvm/java-6-sun-1.6.0.15/jre/lib/i386:/usr/lib/jvm/java-6-sun-1.6.0.15/jre/../lib/i386:/usr/java/packages/lib/i386:/lib:/usr/lib"/>
+    <property name="surefire.test.class.path" value="/home/tltjr/Maven/Test/target/test-classes:/home/tltjr/Maven/Test/target/classes:/home/tltjr/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/home/tltjr/.m2/repository/org/apache/xmlrpc/xmlrpc-client/3.1.2/xmlrpc-client-3.1.2.jar:/home/tltjr/.m2/repository/org/apache/xmlrpc/xmlrpc-common/3.1.2/xmlrpc-common-3.1.2.jar:/home/tltjr/.m2/repository/org/apache/ws/commons/util/ws-commons-util/1.0.2/ws-commons-util-1.0.2.jar:/home/tltjr/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/home/tltjr/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot Tiered Compilers"/>
+    <property name="os.version" value="2.6.31-14-generic"/>
+    <property name="user.home" value="/home/tltjr"/>
+    <property name="user.timezone" value="America/Phoenix"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="user.name" value="tltjr"/>
+    <property name="java.class.path" value="/home/tltjr/Maven/Test/target/test-classes:/home/tltjr/Maven/Test/target/classes:/home/tltjr/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/home/tltjr/.m2/repository/org/apache/xmlrpc/xmlrpc-client/3.1.2/xmlrpc-client-3.1.2.jar:/home/tltjr/.m2/repository/org/apache/xmlrpc/xmlrpc-common/3.1.2/xmlrpc-common-3.1.2.jar:/home/tltjr/.m2/repository/org/apache/ws/commons/util/ws-commons-util/1.0.2/ws-commons-util-1.0.2.jar:/home/tltjr/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/home/tltjr/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="/usr/lib/jvm/java-6-sun-1.6.0.15/jre"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="en"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_15"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-6-sun-1.6.0.15/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-6-sun-1.6.0.15/jre/lib/resources.jar:/usr/lib/jvm/java-6-sun-1.6.0.15/jre/lib/rt.jar:/usr/lib/jvm/java-6-sun-1.6.0.15/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-6-sun-1.6.0.15/jre/lib/jsse.jar:/usr/lib/jvm/java-6-sun-1.6.0.15/jre/lib/jce.jar:/usr/lib/jvm/java-6-sun-1.6.0.15/jre/lib/charsets.jar:/usr/lib/jvm/java-6-sun-1.6.0.15/jre/classes"/>
+    <property name="java.vendor" value="Sun Microsystems Inc."/>
+    <property name="localRepository" value="/home/tltjr/.m2/repository"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="0" classname="junit.framework.TestSuite$1" name="warning">
+    <failure message="Exception in constructor: testLoginRedirect (java.lang.Error: Unresolved compilation problems: 
+	The import org.springframework cannot be resolved
+	The import org.springframework cannot be resolved
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+
+	at com.twowire.web.TestLoginController.&lt;init&gt;(TestLoginController.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at junit.framework.TestSuite.createTest(TestSuite.java:131)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:114)
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:75)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.apache.maven.surefire.junit.JUnitTestSet.constructTestObject(JUnitTestSet.java:151)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:197)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+)" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Exception in constructor: testLoginRedirect (java.lang.Error: Unresolved compilation problems: 
+	The import org.springframework cannot be resolved
+	The import org.springframework cannot be resolved
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	at com.twowire.web.TestLoginController.&lt;init&gt;(TestLoginController.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at junit.framework.TestSuite.createTest(TestSuite.java:131)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:114)
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:75)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.apache.maven.surefire.junit.JUnitTestSet.constructTestObject(JUnitTestSet.java:151)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:197)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+)
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.TestSuite$1.runTest(TestSuite.java:263)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:213)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</failure>
+  </testcase>
+  <testcase time="0" classname="junit.framework.TestSuite$1" name="warning">
+    <failure message="Exception in constructor: testValidLoginForwardsToFrontPageAndStoresUserName (java.lang.Error: Unresolved compilation problems: 
+	The import org.springframework cannot be resolved
+	The import org.springframework cannot be resolved
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+
+	at com.twowire.web.TestLoginController.&lt;init&gt;(TestLoginController.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at junit.framework.TestSuite.createTest(TestSuite.java:131)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:114)
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:75)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.apache.maven.surefire.junit.JUnitTestSet.constructTestObject(JUnitTestSet.java:151)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:197)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+)" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Exception in constructor: testValidLoginForwardsToFrontPageAndStoresUserName (java.lang.Error: Unresolved compilation problems: 
+	The import org.springframework cannot be resolved
+	The import org.springframework cannot be resolved
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	at com.twowire.web.TestLoginController.&lt;init&gt;(TestLoginController.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at junit.framework.TestSuite.createTest(TestSuite.java:131)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:114)
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:75)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.apache.maven.surefire.junit.JUnitTestSet.constructTestObject(JUnitTestSet.java:151)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:197)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+)
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.TestSuite$1.runTest(TestSuite.java:263)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:213)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</failure>
+  </testcase>
+  <testcase time="0" classname="junit.framework.TestSuite$1" name="warning">
+    <failure message="Exception in constructor: testInvalidLoginForwardsToInvalidLoginPage (java.lang.Error: Unresolved compilation problems: 
+	The import org.springframework cannot be resolved
+	The import org.springframework cannot be resolved
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+
+	at com.twowire.web.TestLoginController.&lt;init&gt;(TestLoginController.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at junit.framework.TestSuite.createTest(TestSuite.java:131)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:114)
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:75)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.apache.maven.surefire.junit.JUnitTestSet.constructTestObject(JUnitTestSet.java:151)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:197)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+)" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Exception in constructor: testInvalidLoginForwardsToInvalidLoginPage (java.lang.Error: Unresolved compilation problems: 
+	The import org.springframework cannot be resolved
+	The import org.springframework cannot be resolved
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	at com.twowire.web.TestLoginController.&lt;init&gt;(TestLoginController.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at junit.framework.TestSuite.createTest(TestSuite.java:131)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:114)
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:75)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.apache.maven.surefire.junit.JUnitTestSet.constructTestObject(JUnitTestSet.java:151)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:197)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+)
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.TestSuite$1.runTest(TestSuite.java:263)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:213)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</failure>
+  </testcase>
+  <testcase time="0" classname="junit.framework.TestSuite$1" name="warning">
+    <failure message="Exception in constructor: testGetAuthenticationService (java.lang.Error: Unresolved compilation problems: 
+	The import org.springframework cannot be resolved
+	The import org.springframework cannot be resolved
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+
+	at com.twowire.web.TestLoginController.&lt;init&gt;(TestLoginController.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at junit.framework.TestSuite.createTest(TestSuite.java:131)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:114)
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:75)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.apache.maven.surefire.junit.JUnitTestSet.constructTestObject(JUnitTestSet.java:151)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:197)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+)" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Exception in constructor: testGetAuthenticationService (java.lang.Error: Unresolved compilation problems: 
+	The import org.springframework cannot be resolved
+	The import org.springframework cannot be resolved
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	at com.twowire.web.TestLoginController.&lt;init&gt;(TestLoginController.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at junit.framework.TestSuite.createTest(TestSuite.java:131)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:114)
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:75)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.apache.maven.surefire.junit.JUnitTestSet.constructTestObject(JUnitTestSet.java:151)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:197)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+)
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.TestSuite$1.runTest(TestSuite.java:263)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:213)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</failure>
+  </testcase>
+  <testcase time="0" classname="junit.framework.TestSuite$1" name="warning">
+    <failure message="Exception in constructor: testDoGetForwardsToDoPost (java.lang.Error: Unresolved compilation problems: 
+	The import org.springframework cannot be resolved
+	The import org.springframework cannot be resolved
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+
+	at com.twowire.web.TestLoginController.&lt;init&gt;(TestLoginController.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at junit.framework.TestSuite.createTest(TestSuite.java:131)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:114)
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:75)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.apache.maven.surefire.junit.JUnitTestSet.constructTestObject(JUnitTestSet.java:151)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:197)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+)" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Exception in constructor: testDoGetForwardsToDoPost (java.lang.Error: Unresolved compilation problems: 
+	The import org.springframework cannot be resolved
+	The import org.springframework cannot be resolved
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletRequest cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	MockHttpServletResponse cannot be resolved to a type
+	at com.twowire.web.TestLoginController.&lt;init&gt;(TestLoginController.java:9)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at junit.framework.TestSuite.createTest(TestSuite.java:131)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:114)
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:75)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.apache.maven.surefire.junit.JUnitTestSet.constructTestObject(JUnitTestSet.java:151)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:197)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+)
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.TestSuite$1.runTest(TestSuite.java:263)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:213)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</failure>
+  </testcase>
+</testsuite>

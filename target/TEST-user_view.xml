@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite errors="0" failures="0" name="Login" tests="1" time="0.035000">
-<testcase classname="Login.User submits valid login" name="User submits valid login" time="0.035000">
+<testsuite errors="0" failures="0" name="Login" tests="1" time="0.033000">
+<testcase classname="Login.User submits valid login" name="User submits valid login" time="0.033000">
 </testcase>
 </testsuite>
