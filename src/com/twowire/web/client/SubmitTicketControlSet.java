@@ -1,9 +1,13 @@
 package com.twowire.web.client;
 
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.CheckBox;
+import com.google.gwt.user.client.ui.ClickListener;
 import com.google.gwt.user.client.ui.FileUpload;
 import com.google.gwt.user.client.ui.ListBox;
+import com.twowire.create.TicketFactory;
 
 public class SubmitTicketControlSet {
 
@@ -13,7 +17,8 @@ public class SubmitTicketControlSet {
 	FileUpload attachment;
 	CheckBox emailNotify;
 	Button previewButton;
-	Button finishButton; 
+	Button finishButton;
+	TicketFactory factory = new TicketFactory();
 	
 	public SubmitTicketControlSet() {
 		createListBoxes();
@@ -24,7 +29,18 @@ public class SubmitTicketControlSet {
 
 	private void createButtons() {
 		previewButton = createButton("Preview");
-		finishButton = createButton("Finish");
+		finishButton = new Button("Finish", new ClickHandler() {
+			@Override
+			public void onClick(ClickEvent event) {
+				String severity = severityListBox.getValue(severityListBox.getSelectedIndex());
+				System.out.println(severity);
+				String type = ticketTypeListBox.getValue(ticketTypeListBox.getSelectedIndex());
+				System.out.println(type);
+				String priority = priorityListBox.getValue(priorityListBox.getSelectedIndex());
+				System.out.println(priority);
+				factory.createTicket(severity, type, priority, null, true);
+			}
+		});
 	}
 
 	private void createListBoxes() {

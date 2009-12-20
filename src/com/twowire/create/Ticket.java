@@ -18,4 +18,24 @@ public class Ticket {
 		this.notify = notify;
 	}
 
+	public String getSeverity() {
+		return severity;
+	}
+
+	public String getTicketType() {
+		return ticketType;
+	}
+
+	public String getPriority() {
+		return priority;
+	}
+
+	public File getAttachment() {
+		return attachment;
+	}
+
+	public boolean isNotify() {
+		return notify;
+	}
+
 }

@@ -1,6 +1,7 @@
 package com.twowire.data;
 
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Vector;
 
@@ -26,6 +27,18 @@ public class DataService implements IDataService {
 		DataConfiguration config = conn.getConfig();
 		HashMap<?, ?> issue = (HashMap<?, ?>) config.getClient().execute("jira1.getIssue", getIssueParams);
 		return issue;
+	}
+
+	public void createIssue(Hashtable issueTable) {
+		Vector createIssueParams = new Vector();
+		String loginToken = conn.login();
+		createIssueParams.add(loginToken);
+		createIssueParams.add(issueTable);
+		try {
+			conn.getConfig().getClient().execute("jira1.createIssue", createIssueParams);
+		} catch (XmlRpcException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
