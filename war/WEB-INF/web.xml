@@ -8,17 +8,17 @@
   <!-- Servlets -->
   <servlet>
     <servlet-name>greetServlet</servlet-name>
-    <servlet-class>com.twowire.crm.server.GreetingServiceImpl</servlet-class>
+    <servlet-class>com.twowire.web.server.GreetingServiceImpl</servlet-class>
   </servlet>
   
   <servlet-mapping>
     <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/test/greet</url-pattern>
+    <url-pattern>/maingui/greet</url-pattern>
   </servlet-mapping>
   
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>Test.html</welcome-file>
+    <welcome-file>MainGUI.html</welcome-file>
   </welcome-file-list>
 
 </web-app>
