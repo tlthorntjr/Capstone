@@ -1,10 +1,11 @@
 package com.twowire.data;
 
-import static org.junit.Assert.*;
 import junit.framework.TestCase;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.twowire.data.jira.XmlRpcDataConnection;
 
 public class TestXmlRpcDataConnection extends TestCase {
 

@@ -16,6 +16,21 @@
     <url-pattern>/maingui/greet</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <servlet-name>twowireServiceImpl</servlet-name>
+    <servlet-class>com.twowire.web.server.TwowireServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>twowireServiceImpl</servlet-name>
+    <url-pattern>/maingui/TwoWireService</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>MainGUI.html</welcome-file>
+  </welcome-file-list>
+
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>MainGUI.html</welcome-file>

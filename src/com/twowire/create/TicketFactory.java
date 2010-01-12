@@ -7,7 +7,7 @@ import java.util.List;
 
 import com.twowire.Observer;
 import com.twowire.Subject;
-import com.twowire.data.IssueCreator;
+import com.twowire.data.jira.IssueCreator;
 import com.twowire.notify.EmailNotification;
 
 public class TicketFactory implements Subject {

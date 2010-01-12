@@ -15,7 +15,6 @@ public class TestEmailNotification extends TestCase {
 	
 	@Test
 	public void testClass() throws Exception {
-		EmailNotification en = new EmailNotification();
 	}
 
 }

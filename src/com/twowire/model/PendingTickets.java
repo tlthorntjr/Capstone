@@ -4,17 +4,18 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import com.twowire.data.IDataService;
+import com.twowire.data.jira.IDataService;
 
 public class PendingTickets {
 	
-	private List tickets;
+	@SuppressWarnings("unused")
 	private IDataService dataService;
 	
 	public PendingTickets(IDataService dataService) {
 		this.dataService = dataService;
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<HashMap> getTickets() {
 		List result = new ArrayList();
 		HashMap issue = new HashMap();

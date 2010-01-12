@@ -1,13 +1,14 @@
 package com.twowire.web.client;
 
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.CheckBox;
-import com.google.gwt.user.client.ui.ClickListener;
 import com.google.gwt.user.client.ui.FileUpload;
 import com.google.gwt.user.client.ui.ListBox;
-import com.twowire.create.TicketFactory;
 
 public class SubmitTicketControlSet {
 
@@ -18,7 +19,7 @@ public class SubmitTicketControlSet {
 	CheckBox emailNotify;
 	Button previewButton;
 	Button finishButton;
-	TicketFactory factory = new TicketFactory();
+	TwowireServiceAsync twowireService;
 	
 	public SubmitTicketControlSet() {
 		createListBoxes();
@@ -26,6 +27,20 @@ public class SubmitTicketControlSet {
 		emailNotify = new CheckBox();
 		createButtons();
 	}
+	
+	private TwowireServiceAsync getTwowireServiceInstance() {
+		  if (twowireService == null) {
+		    // Instantiate the service 
+			  twowireService = (TwowireServiceAsync) GWT.create(TwowireService.class);
+		    // Specify the URL at which the service implementation is running.
+		    // The target URL must reside on the same domain and port from
+		    // which the host page was served.
+			  System.out.println(GWT.getModuleBaseURL());
+		   // ((ServiceDefTarget) twowireService).setServiceEntryPoint( GWT.getModuleBaseURL() +
+		     //                                                          "TwoWireService");
+		   }
+		   return twowireService;
+		}
 
 	private void createButtons() {
 		previewButton = createButton("Preview");
@@ -34,11 +49,24 @@ public class SubmitTicketControlSet {
 			public void onClick(ClickEvent event) {
 				String severity = severityListBox.getValue(severityListBox.getSelectedIndex());
 				System.out.println(severity);
-				String type = ticketTypeListBox.getValue(ticketTypeListBox.getSelectedIndex());
-				System.out.println(type);
+				String ticketType = ticketTypeListBox.getValue(ticketTypeListBox.getSelectedIndex());
+				System.out.println(ticketType);
 				String priority = priorityListBox.getValue(priorityListBox.getSelectedIndex());
 				System.out.println(priority);
-				factory.createTicket(severity, type, priority, null, true);
+				getTwowireServiceInstance().submitIssue(severity, ticketType, priority, false, 
+						new AsyncCallback() {
+				    
+					@Override	
+					public void onFailure(Throwable caught) {
+						Window.alert("You are a colossal failure! " + caught.getMessage());
+					}
+
+					@Override
+					public void onSuccess(Object result) {
+						Window.alert("That worked.");
+						
+					}
+				});
 			}
 		});
 	}
@@ -57,33 +85,52 @@ public class SubmitTicketControlSet {
 
 	private ListBox createPriorityListBox() {
 		ListBox priorityLB = new ListBox();
+		/*
 		priorityLB.addItem("P1");
 		priorityLB.addItem("P2");
 		priorityLB.addItem("P3");
+		*/
+		priorityLB.addItem("Blocker");
+		priorityLB.addItem("Critical");
+		priorityLB.addItem("Major");
+		priorityLB.addItem("Minor");
+		priorityLB.addItem("Trivial");
 		return priorityLB;
+		
 	}
 
 	private ListBox createTicketTypeListBox() {
 		ListBox ticketTypeLB = new ListBox();
+		
+// Jira's test instance only allows certain ticket types. The below don't qualify.
 		ticketTypeLB.addItem("Select One");
+		/*
 		ticketTypeLB.addItem("General Question");
 		ticketTypeLB.addItem("Problem Report");
 		ticketTypeLB.addItem("Feature Request");
 		ticketTypeLB.addItem("Documentation Request");
 		ticketTypeLB.addItem("Account Issue");
 		ticketTypeLB.addItem("Other");
+		*/
+		ticketTypeLB.addItem("Bug");
+		ticketTypeLB.addItem("New Feature");
+		ticketTypeLB.addItem("Improvement");
 		return ticketTypeLB;
 	}
 
 	private ListBox createSeverityListBox() {
 		ListBox severityLB = new ListBox();
 		severityLB.addItem("Select One");
+		
 		severityLB.addItem("Critical: Major Function Unavailable");
 		severityLB.addItem("Critical: Major Function Unavailable");
 		severityLB.addItem("Major: Critical But Has Workaround");
 		severityLB.addItem("Minor: Some Business Impact");
 		severityLB.addItem("Not Severe");
+		
+
 		return severityLB;
+		
 	}
 
 	public ListBox getSeverityListBox() {

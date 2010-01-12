@@ -3,7 +3,6 @@ package com.twowire.steps;
 
 import static junit.framework.Assert.assertTrue;
 import cuke4duke.Given;
-import cuke4duke.Pending;
 import cuke4duke.StepMother;
 import cuke4duke.Steps;
 import cuke4duke.Then;
@@ -11,7 +10,6 @@ import cuke4duke.When;
 
 public class UserView extends Steps {
 	
-	private boolean exceptionThrown = false;
 	
 	public UserView(StepMother stepMother) {
 		super(stepMother);

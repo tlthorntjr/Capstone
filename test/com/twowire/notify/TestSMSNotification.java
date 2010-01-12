@@ -13,6 +13,5 @@ public class TestSMSNotification extends TestCase {
 
 	@Test
 	public void testClass() throws Exception {
-		SMSNotification smsn = new SMSNotification();
 	}
 }

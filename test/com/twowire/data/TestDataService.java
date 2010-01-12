@@ -7,6 +7,11 @@ import junit.framework.TestCase;
 import org.apache.xmlrpc.client.XmlRpcClient;
 import org.junit.Before;
 
+import com.twowire.data.jira.DataConfiguration;
+import com.twowire.data.jira.DataService;
+import com.twowire.data.jira.XmlRpcConfiguration;
+import com.twowire.data.jira.XmlRpcDataConnection;
+
 public class TestDataService extends TestCase {
 	
 	private DataConfiguration dataConfig;
