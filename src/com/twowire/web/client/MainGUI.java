@@ -1,6 +1,11 @@
 package com.twowire.web.client;
 
+import java.util.HashMap;
+import java.util.List;
+
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DecoratedTabPanel;
 import com.google.gwt.user.client.ui.DockPanel;
@@ -48,11 +53,23 @@ public class MainGUI implements EntryPoint {
 	}
 
 	private void setOnlineSupport() {
-		VerticalPanel main = new VerticalPanel();
-		main.add(new HTML("<h1>Recent Tickets</h1>"));
-		main
-				.add(new HTML(
-						"<b1>This is where we will put recent tickets.</b1>"));
+		final VerticalPanel main = new VerticalPanel();
+		main.add(new HTML("<h1>Recent Tickets</h1><br/>"));
+		ServiceManager.getTwowireServiceInstance().retrieveIssues(new AsyncCallback<List<String>>() {
+
+			@Override
+			public void onFailure(Throwable caught) {
+				Window.alert("Pending tickets is a colossal failure! " + caught.getMessage());
+			}
+
+			@Override
+			public void onSuccess(List<String> result) {
+				for(int i=0; i<result.size(); i++) {
+					main.add(new HTML("<div>" + result.get(i) + "</div><br/>"));
+				}
+			}
+			
+		});
 		recentTicketsPanel.add(main);
 	}
 

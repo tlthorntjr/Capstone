@@ -19,7 +19,6 @@ public class SubmitTicketControlSet {
 	CheckBox emailNotify;
 	Button previewButton;
 	Button finishButton;
-	TwowireServiceAsync twowireService;
 	
 	public SubmitTicketControlSet() {
 		createListBoxes();
@@ -27,20 +26,6 @@ public class SubmitTicketControlSet {
 		emailNotify = new CheckBox();
 		createButtons();
 	}
-	
-	private TwowireServiceAsync getTwowireServiceInstance() {
-		  if (twowireService == null) {
-		    // Instantiate the service 
-			  twowireService = (TwowireServiceAsync) GWT.create(TwowireService.class);
-		    // Specify the URL at which the service implementation is running.
-		    // The target URL must reside on the same domain and port from
-		    // which the host page was served.
-			  System.out.println(GWT.getModuleBaseURL());
-		   // ((ServiceDefTarget) twowireService).setServiceEntryPoint( GWT.getModuleBaseURL() +
-		     //                                                          "TwoWireService");
-		   }
-		   return twowireService;
-		}
 
 	private void createButtons() {
 		previewButton = createButton("Preview");
@@ -53,7 +38,7 @@ public class SubmitTicketControlSet {
 				System.out.println(ticketType);
 				String priority = priorityListBox.getValue(priorityListBox.getSelectedIndex());
 				System.out.println(priority);
-				getTwowireServiceInstance().submitIssue(severity, ticketType, priority, false, 
+				ServiceManager.getTwowireServiceInstance().submitIssue(severity, ticketType, priority, false, 
 						new AsyncCallback() {
 				    
 					@Override	
